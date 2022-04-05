@@ -42,7 +42,7 @@ def main3(): #ENVIA 3 LINHA
         try:
             navegador.find_element_by_css_selector("body > div.chatbox3 > div > div > div.controlwrapper > table > tbody > tr > td.chatmsgcell > div > textarea").send_keys(chat)
             navegador.find_element_by_css_selector("body > div.chatbox3 > div > div > div.controlwrapper > table > tbody > tr > td.sendbthcell > div > button").click()
-            time.sleep(tempo) # Sleep 2  = 1 Hora de recaptcha
+            time.sleep(tempo) 
             navegador.find_element_by_css_selector("body > div.chatbox3 > div > div > div.controlwrapper > table > tbody > tr > td.disconnectbtncell > div > button").click()
             navegador.find_element_by_css_selector("body > div.chatbox3 > div > div > div.controlwrapper > table > tbody > tr > td.disconnectbtncell > div > button").click()
         except:
@@ -64,13 +64,13 @@ def main2(): #ENVIA 1 LINHA
             navegador.find_element_by_css_selector("body > div.chatbox3 > div > div > div.controlwrapper > table > tbody > tr > td.disconnectbtncell > div > button").click()
             navegador.find_element_by_css_selector("body > div.chatbox3 > div > div > div.controlwrapper > table > tbody > tr > td.disconnectbtncell > div > button").click()
         except:
-            pass #continue nao reiniciou o loop
+            pass #LOOP FALHOU
 
 def main():
     global chat
     global tempo
     #chat = input("Texto para enviar:")
-    navegador.get("https://www.omegle.com") #ABRE O OOMEGLE
+    navegador.get("https://www.omegle.com")
     cls()
     time.sleep(3)
     print("              zkawayz")
